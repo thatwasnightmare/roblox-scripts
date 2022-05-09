@@ -35,10 +35,7 @@ end)
 return setmetatable({}, {
 	__call = function(self, ...)
 		local closure = find_closure(...)
-		if closure then
-			return closure
-		end
-		return nil
+		return closure
 	end,
 	__metatable = "The metatable is locked"
 })
